@@ -1,6 +1,5 @@
 package aplication;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -20,7 +19,7 @@ public class Program {
 		System.out.println(seller);
 		
 		System.out.println("\n\n=== teste 2 : seller findByIdDepartment ===");
-		Department dep = new Department(2, null);
+		Department dep = new Department(4, null);
 		List<Seller> list = sellerDao.findByDepartment(dep);
 		
 		list.forEach(l->{

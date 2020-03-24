@@ -7,6 +7,7 @@ import java.util.List;
 
 import db.DbException;
 import model.dao.DaoFactory;
+import model.dao.DepartmentDao;
 import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
@@ -14,6 +15,17 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
+		
+		System.out.println("=== teste 1 : Department insert ===");
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+		Department department = new Department(0, "House");
+		//departmentDao.insert(department);
+		
+		System.out.println("=== teste 2 : Department update ===");
+		Department department2 = new Department(5, "Videos Games");
+		departmentDao.update(department2);
+		
+		
 
 		System.out.println("=== teste 1 : seller findById ===");
 		

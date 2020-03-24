@@ -2,6 +2,7 @@ package aplication;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import db.DbException;
@@ -51,6 +52,13 @@ public class Program {
 		
 		System.out.println("\n\n=== teste 5 : seller delete ===");
 		sellerDao.deleteById(3);
+		
+		System.out.println("\n\n=== teste 6 : seller findAll ===");
+		List<Seller> list2 = new ArrayList<Seller>();
+		list2 = sellerDao.findAll();
+		list2.forEach(l->{
+			System.out.println(l);
+		});
 		
 	}
 	

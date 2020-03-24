@@ -16,18 +16,28 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		System.out.println("=== teste 1 : Department insert ===");
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
-		Department department = new Department(0, "Car");
-		departmentDao.insert(department);
+		
+		System.out.println("=== teste 1 : Department insert ===");		
+		Department department = new Department(0, "Truks");
+		//departmentDao.insert(department);
 		
 		System.out.println("=== teste 2 : Department update ===");
-		Department department2 = new Department(5, "Videos Games");
+		Department department2 = new Department(5, "Video Game");
 		departmentDao.update(department2);
 		
 		System.out.println("=== teste 3 : Department delete ===");
 		departmentDao.deleteById(6);
 		
+		System.out.println("=== teste 4 : Department findById ===");
+		Department depart = departmentDao.findById(1);
+		System.out.println(depart);
+		
+		System.out.println("=== teste 5 : Department findAll ===");
+		List<Department>listDepartment = departmentDao.findAll();
+		listDepartment.forEach(l->{
+			System.out.println(l);
+		});
 
 		System.out.println("=== teste 1 : seller findById ===");
 		

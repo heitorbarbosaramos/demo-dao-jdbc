@@ -49,8 +49,8 @@ public class Program {
 			throw new DbException(e.getMessage());
 		}
 		
-		
-		
+		System.out.println("\n\n=== teste 5 : seller delete ===");
+		sellerDao.deleteById(3);
 		
 	}
 	

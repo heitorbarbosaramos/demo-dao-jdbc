@@ -109,6 +109,8 @@ public class SellerDaoJDBC implements SellerDao{
 			if(rowsAffcted > 0 ) {System.out.println("\n\n\t Delete Success ID: "+id);}else{System.out.println("\n\n\t Delete Failed ID: "+id);}
 		}catch(SQLException e) {
 			throw new DbException(e.getMessage());
+		}finally {
+			DB.closeStatement(st);
 		} 
 		
 	}
